@@ -1,39 +1,37 @@
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import group.Group;
+import group.StudyGroup;
+import student.Student;
 
 public class Main {
     public static void main(String[] args) {
-        StudyGroup group = new StudyGroup();
-        StudyGroupService studyGroupService = new StudyGroupService(group);
+        Group group = new StudyGroup();
+        Service service = new Service(group);
+        service.addStudent("Паша");
+        service.addStudent("Маша");
+        service.addStudent("Даша");
+        service.addStudent("Наташа");
 
-        studyGroupService.addStudent("Ваня");
-        studyGroupService.addStudent("Петя");
-        studyGroupService.addStudent("Вася");
-        studyGroupService.addStudent("Маша");
-
-//        List<String> list = new ArrayList<>();
-//
-//        Iterator<String> iterator = list.iterator();
+//        Iterator<student.Student> iterator = group.iterator();
 //        while (iterator.hasNext()){
-//            String s = iterator.next();
-//            System.out.println(s);
+//            student.Student student = iterator.next();
+//            System.out.println(student);
 //        }
-
-
-        for (Student student: group){
-            System.out.println(student);
-        }
-        System.out.println();
-
-        studyGroupService.sortByName();
         for (Student student: group){
             System.out.println(student);
         }
 
+        service.sortByName();
+        System.out.println();
         System.out.println();
 
-        studyGroupService.sortById();
+        for (Student student: group){
+            System.out.println(student);
+        }
+
+        service.sortById();
+        System.out.println();
+        System.out.println();
+
         for (Student student: group){
             System.out.println(student);
         }

@@ -1,3 +1,7 @@
+package group.comparators;
+
+import student.Student;
+
 import java.util.Comparator;
 
 public class StudentComparatorById implements Comparator<Student> {

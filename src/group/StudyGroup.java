@@ -1,8 +1,12 @@
+package group;
+
+import student.Student;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class StudyGroup implements Iterable<Student>{
+public class StudyGroup implements Group{
     private List<Student> studentList;
 
     public StudyGroup() {
@@ -19,6 +23,6 @@ public class StudyGroup implements Iterable<Student>{
 
     @Override
     public Iterator<Student> iterator() {
-        return new StudyGroupIterator(studentList);
+        return new StudentIterator(studentList);
     }
 }

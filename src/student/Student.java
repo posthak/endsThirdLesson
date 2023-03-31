@@ -1,3 +1,5 @@
+package student;
+
 public class Student implements Comparable<Student>{
     private int id;
     private String name;
@@ -17,11 +19,14 @@ public class Student implements Comparable<Student>{
 
     @Override
     public String toString() {
-        return id + " " + name;
+        return "student.Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 
     @Override
     public int compareTo(Student o) {
-        return name.compareTo(o.name);
+        return name.compareTo(o.getName());
     }
 }

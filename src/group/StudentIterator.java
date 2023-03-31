@@ -1,11 +1,15 @@
+package group;
+
+import student.Student;
+
 import java.util.Iterator;
 import java.util.List;
 
-public class StudyGroupIterator implements Iterator<Student> {
-    private List<Student> studentList;
+public class StudentIterator implements Iterator<Student> {
     private int index;
+    private List<Student> studentList;
 
-    public StudyGroupIterator(List<Student> studentList) {
+    public StudentIterator(List<Student> studentList) {
         this.studentList = studentList;
     }
 
